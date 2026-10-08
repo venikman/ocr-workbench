@@ -10,6 +10,8 @@ The standalone browser preview is [http://127.0.0.1:4317/](http://127.0.0.1:4317
 
 `OcrWorkbench` accepts a document/domain bundle and an edit callback. Its styles and shortcuts stay inside the component, and the host allocates its size. Browser storage, sample actions, and OCR execution are disabled unless configured. The standalone Vite host opts into its existing local storage namespace and OCR API.
 
+Use `appearance="host"` to follow your app's design tokens and typography, or pass a typed `theme` for custom colors, fonts, and radii. Classic remains the component default. The Next.js example includes live Design settings for Match app/Classic, Light/Dark, and accent color. See [DESIGN.md](DESIGN.md) for the design reference, token contract, and how to adapt a getdesign.md-style reference.
+
 ## Use
 
 1. **Files → Healthcare example** adds a wholly synthetic clinical note, actual captured Tesseract output, and a clinical domain profile without replacing your existing work. It contains eight anchored review prompts. See [HEALTHCARE-SAMPLE.md](HEALTHCARE-SAMPLE.md).

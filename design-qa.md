@@ -157,3 +157,20 @@ Limits: no external host repository was changed, no authenticated Next.js OCR AP
 ## Initial repository verification (2026-10-07)
 
 A clean copy containing only staged source files passed root `npm ci`, `npm test` (38/38), `npm run build`, `npm run test:sites` (4/4), and `npm run test:ocr` (12/12, including actual two-page PDF extraction). Its Next.js example then passed `npm ci`, `npm run typecheck`, and `npm run build`. This verifies installation from the committed lockfiles without relying on the working directory's installed dependencies or generated assets. Generated build output, copied example assets, dependencies, and historical review exports are excluded from Git. Captured OCR whitespace is preserved unchanged.
+
+## Host design and theme verification (2026-10-07)
+
+Result: passed for the supplied Classic preset and Next.js host's light/dark palettes. Package version is 0.2.0. This adds presentation configuration; healthcare release boundaries remain unchanged.
+
+- Added `appearance="classic" | "host"` and a typed `theme` with 24 semantic tokens. CSS variables stay scoped to the workbench. Public overrides inherit from the host; internal defaults do not shadow them. The session key and review-data model are unchanged.
+- Added `DESIGN.md` as the contributor/integration reference following getdesign.md's Markdown design-reference pattern. It explains token mapping, precedence, source-evidence boundaries, and custom-theme validation. Arbitrary Markdown is not interpreted at runtime.
+- The Next.js host exposes Design settings with Match app/Classic, Light/Dark, and a native accent picker. Native input events update the accent live. Small active labels use the regular foreground; host links blend the accent with text for readability. Thin neutral halos keep source boxes distinguishable from the page.
+- Final `npm test`: 47/47 passed. `npm run test:sites`: 4/4 passed. Standalone `npm run build` and Next.js `npm run typecheck` / `npm run build` passed. No dependencies were added. OCR execution was unchanged; its previous extraction tests were not repeated.
+- Browser: edited a note once, selected its finding, switched Light to Dark, Match app to Classic and back, and changed the accent. The edited note and selected finding/line range survived; the host counter stayed at one change. Undo restored the test edit. Appearance changes do not notify the host of review edits.
+- Verified the unchanged source image URL and computed `filter: none`; rendered OCR retains a white background and light color scheme in dark mode. The standalone preview still uses the Classic warm palette and monospace UI.
+- Added the synthetic healthcare fixture in memory. Mark reviewed still rejected unchecked identity. Inspected the dark clinical dialog at 1280×720: width and scrollWidth both 648 CSS pixels; Close and Save remained visible within the viewport. No clinical attestations or approvals were entered.
+- Measured the dark host at 1280×720, 1366×768, and 1440×900. All three panes and host navigation remained available; document scroll dimensions matched the viewport with no whole-page overflow. Toolbar height was 46.4 CSS pixels at every size. Measurements are in `verification/theme-layout-checks.json`.
+- After the production build, reloaded the Next.js example and rechecked light/dark/accent controls. Selection survived and the host counter remained at zero changes. The warning/error log query returned no entries. Viewport reset was requested after the checks.
+- Personally inspected Classic, light, dark, selected-text, rendered-output, source-box, and healthcare-dialog states. Captures: `verification/theme-classic.png`, `theme-host-light.png`, `theme-host-dark.png`, `theme-dark-dialog.png`, and the three laptop-size captures.
+
+Limits: custom theme values need host-specific contrast and layout checks. A host with different token names or bare HSL channels needs an explicit mapping. No automatic interpretation of an arbitrary application's styles or DESIGN.md prose, exhaustive browser matrix, or new clinical readiness claim is implied.

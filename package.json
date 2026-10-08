@@ -1,6 +1,6 @@
 {
   "name": "@local/ocr-workbench",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "vite build && node scripts/prepare-sites-build.mjs",
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
-    "test": "node --test tests/review.test.mjs tests/clinical-review.test.mjs tests/healthcare-fixtures.test.mjs tests/component-options.test.mjs tests/component-styles.test.mjs",
+    "test": "node --test tests/review.test.mjs tests/clinical-review.test.mjs tests/healthcare-fixtures.test.mjs tests/component-options.test.mjs tests/component-styles.test.mjs tests/theme.test.mjs",
     "local": "node scripts/start-local.mjs",
     "test:ocr": "node --test tests/ocr.test.mjs"
   },
@@ -39,6 +39,7 @@
     "public/assets",
     "README.md",
     "NEXTJS.md",
+    "DESIGN.md",
     "SPEC.md",
     "SAMPLE-SOURCES.md",
     "HEALTHCARE-SAMPLE.md",

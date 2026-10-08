@@ -58,7 +58,11 @@ The Server Component should load only data the signed-in user may access, valida
 | `storageKey` | Omitted/null disables all component IndexedDB access. An explicit key enables reading that database; the user must still opt into autosave each session. Stored data takes precedence over `initialBundle` when present. |
 | `ocrBaseUrl` | Omitted/null hides OCR execution. An explicit same-origin path, such as `/api/ocr-workbench`, enables the local OCR protocol described below. |
 | `showExamples` | False by default. True exposes the synthetic healthcare example action; the host must serve its fixture assets. |
+| `appearance` | `"classic"` by default, or `"host"` to inherit the host's design tokens and typography. |
+| `theme` | Optional typed semantic CSS values (colors, fonts, radius, base font size). Updates styling without resetting review state. |
 | `className`, `style` | Applied to the outer container. The host must allocate a height. No global body styles or viewport takeover. |
+
+For host matching, use `appearance="host"` and expose full CSS values through the host variables described in [DESIGN.md](DESIGN.md). For other design systems, map their values through `theme`, for example `theme={{ accent: "var(--brand)", accentText: "white", radius: "8px" }}`. Theme variables stay scoped to the component; source images and review exports are unaffected. The design document guides coding-agent integration and is not automatically parsed at runtime.
 
 This is an uncontrolled editing session. Changing `initialBundle` during a mounted session does not overwrite in-progress edits. After handling unsaved work, change the React `key` to load a different workspace or server revision. Changing `storageKey` also remounts the editing session. Use a distinct storage key for each authorized user/workspace, and omit it for host-managed persistence. Browser storage is unencrypted and does not provide access control.
 

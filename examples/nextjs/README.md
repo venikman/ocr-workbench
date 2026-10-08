@@ -54,6 +54,30 @@ into `public/assets`. They are generated example assets; do not commit this copy
 - `showExamples` exposes the public/synthetic sample actions for this demo.
   Omit it in a production host.
 
+## Match the host design
+
+The example starts with `appearance="host"`. Open **Design settings** in the host
+header to switch between **Match app** and **Classic**, change the host's light or
+dark appearance, or choose a custom accent. These settings update the mounted
+component without resetting the review or calling `onChange`.
+
+`globals.css` defines the host's semantic CSS variables on `.host-app`:
+`--background`, `--foreground`, `--card`, `--card-foreground`, `--muted`,
+`--muted-foreground`, `--border`, `--primary`, `--primary-foreground`, `--ring`,
+`--radius`, `--font-sans`, and `--font-mono`. Use full CSS values such as
+`#2563eb`, `oklch(0.55 0.2 260)`, or `6px`. The workbench's host appearance reads
+these inherited tokens; Classic retains the original workbench design.
+
+The native color control sets the host's primary and focus colors. The example
+chooses black or white primary text to maintain contrast against that accent.
+The source document keeps its original image colors in either appearance.
+
+For a design specification such as a `DESIGN.md` obtained from getdesign.md, map
+the approved color, typography, and shape decisions to these host tokens or the
+component's `theme` prop. This example does not fetch or execute design documents.
+See the package's [design integration guide](../../DESIGN.md) for the token
+contract and per-component overrides.
+
 Source image URLs are resolved by the browser, not by the npm package. The bundle
 validator accepts local `/assets/` PNG/JPEG/WebP paths or base64 PNG/JPEG/WebP
 data URLs. Remote image URLs and SVG are not supported. For these examples the

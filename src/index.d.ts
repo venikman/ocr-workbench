@@ -76,6 +76,33 @@ export interface ReviewBundle {
   cases: DocumentCase[];
   exportedAt?: string;
 }
+/** Semantic CSS values; use full colors such as oklch(...), hex, or var(--brand). */
+export interface WorkbenchTheme {
+  background?: string;
+  surface?: string;
+  surfaceMuted?: string;
+  text?: string;
+  mutedText?: string;
+  border?: string;
+  accent?: string;
+  accentText?: string;
+  accentHover?: string;
+  focus?: string;
+  selection?: string;
+  selectionText?: string;
+  success?: string;
+  successSurface?: string;
+  danger?: string;
+  dangerSurface?: string;
+  warningSurface?: string;
+  warningText?: string;
+  canvas?: string;
+  fontFamily?: string;
+  monoFontFamily?: string;
+  notesFontFamily?: string;
+  radius?: string;
+  fontSize?: string;
+}
 export interface OcrWorkbenchProps {
   /** Nonempty schema-3 bundle. Validated and copied on mount. Remount with a new React key to replace it. */
   initialBundle: ReviewBundle;
@@ -87,8 +114,14 @@ export interface OcrWorkbenchProps {
   ocrBaseUrl?: string | null;
   /** Include the synthetic healthcare example action. Defaults to false. Host must serve its assets. */
   showExamples?: boolean;
+  /** Classic preserves the standalone palette; host follows inherited app tokens and typography. */
+  appearance?: "classic" | "host";
+  /** Optional semantic overrides. Updates presentation without resetting the editing session. */
+  theme?: WorkbenchTheme;
   /** Applied to the parent-sized outer container. Host must allocate an explicit height. */
   className?: string;
-  style?: CSSProperties;
+  style?: CSSProperties & {
+    [token: `--ocr-${string}`]: string | number | undefined;
+  };
 }
 export declare function OcrWorkbench(props: OcrWorkbenchProps): ReactElement;

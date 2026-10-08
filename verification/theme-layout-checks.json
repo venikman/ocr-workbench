@@ -1,0 +1,116 @@
+[
+  {
+    "document": [
+      1280,
+      1280,
+      720,
+      720
+    ],
+    "hostFont": "Arial, Helvetica, sans-serif",
+    "panel": {
+      "height": 605,
+      "width": 1254
+    },
+    "panes": [
+      {
+        "height": 483,
+        "name": "OCR output",
+        "width": 425
+      },
+      {
+        "height": 483,
+        "name": "Source document",
+        "width": 595
+      },
+      {
+        "height": 483,
+        "name": "Review findings",
+        "width": 232
+      }
+    ],
+    "sourceFilter": "none",
+    "theme": "host",
+    "toolbarHeight": 46.390625,
+    "uiFont": "Arial, Helvetica, sans-serif",
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  {
+    "document": [
+      1366,
+      1366,
+      768,
+      768
+    ],
+    "hostFont": "Arial, Helvetica, sans-serif",
+    "panel": {
+      "height": 653,
+      "width": 1340
+    },
+    "panes": [
+      {
+        "height": 531,
+        "name": "OCR output",
+        "width": 455
+      },
+      {
+        "height": 531,
+        "name": "Source document",
+        "width": 651
+      },
+      {
+        "height": 531,
+        "name": "Review findings",
+        "width": 232
+      }
+    ],
+    "sourceFilter": "none",
+    "theme": "host",
+    "toolbarHeight": 46.390625,
+    "uiFont": "Arial, Helvetica, sans-serif",
+    "viewport": [
+      1366,
+      768
+    ]
+  },
+  {
+    "document": [
+      1440,
+      1440,
+      900,
+      900
+    ],
+    "hostFont": "Arial, Helvetica, sans-serif",
+    "panel": {
+      "height": 785,
+      "width": 1414
+    },
+    "panes": [
+      {
+        "height": 663,
+        "name": "OCR output",
+        "width": 480
+      },
+      {
+        "height": 663,
+        "name": "Source document",
+        "width": 700
+      },
+      {
+        "height": 663,
+        "name": "Review findings",
+        "width": 232
+      }
+    ],
+    "sourceFilter": "none",
+    "theme": "host",
+    "toolbarHeight": 46.390625,
+    "uiFont": "Arial, Helvetica, sans-serif",
+    "viewport": [
+      1440,
+      900
+    ]
+  }
+]
