@@ -1,0 +1,25 @@
+/* These rules belong to the host application, outside the review component. */
+html, body { margin: 0; min-height: 100%; }
+body { background: #f0f2f4; color: #25303d; font-family: Arial, Helvetica, sans-serif; }
+.host-app { height: 100dvh; min-height: 480px; display: flex; flex-direction: column; overflow: hidden; }
+.host-header { display: flex; align-items: center; flex: none; gap: 16px; min-height: 48px; padding: 0 16px; background: #17273a; color: #f5f8fc; }
+.host-brand { color: inherit; text-decoration: none; font-size: 15px; font-weight: 700; white-space: nowrap; }
+.host-framework { font-size: 11px; color: #b4c6db; }
+.host-navigation { margin-left: auto; display: flex; gap: 8px; }
+.host-navigation button, .host-empty button { font: inherit; font-size: 12px; border: 1px solid #a4b2c3; border-radius: 5px; background: #fff; color: #24384f; padding: 6px 10px; cursor: pointer; }
+.host-navigation button:hover, .host-empty button:hover { background: #e8f0f8; }
+.host-navigation button:focus-visible, .host-empty button:focus-visible, .host-brand:focus-visible { outline: 2px solid #438dc8; outline-offset: 3px; }
+.host-details { flex: none; font-size: 12px; line-height: 1.5; padding: 10px 16px; background: #e8eef5; border-bottom: 1px solid #c8d3df; }
+.host-main { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 0 12px 8px; }
+.host-workspace-heading { display: flex; flex: none; align-items: center; justify-content: space-between; gap: 12px; min-height: 37px; }
+.host-workspace-heading h1 { margin: 0; font-size: 13px; font-weight: 600; }
+.host-review-status { font-size: 11px; color: #526476; }
+.host-review-panel { flex: 1; min-height: 0; min-width: 0; overflow: hidden; position: relative; background: white; border: 1px solid #c2ccd5; border-radius: 6px; box-shadow: 0 1px 3px #1e2d3f0d; }
+.host-empty { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 13px; }
+.host-empty h2 { margin: 0; font-size: 18px; }
+.host-footer { flex: none; padding: 0 16px 8px; color: #6b7988; font-size: 10px; }
+@media (max-width: 900px) {
+  .host-framework { display: none; }
+  .host-header { gap: 8px; padding: 0 10px; }
+  .host-main { padding-right: 6px; padding-left: 6px; }
+}

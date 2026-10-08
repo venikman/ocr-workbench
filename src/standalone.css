@@ -1,0 +1,13 @@
+/* Demo shell only. Do not import this file from the embeddable component. */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: clip;
+}
+
+.standalone-host {
+  position: fixed;
+  inset: 0;
+}

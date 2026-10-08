@@ -1,0 +1,41 @@
+{
+  "fixtureKind": "wholly-synthetic",
+  "sourceDescription": "Programmatically authored fictional clinical note; not derived from a patient record.",
+  "generatedAt": "2026-10-07T23:24:09Z",
+  "image": {
+    "file": "synthetic-clinical-note.png",
+    "width": 1530,
+    "height": 1980,
+    "sha256": "6c2cba925cfff2dd90309de30071290bbc56ab110aafc8f8032f97f8326e7864"
+  },
+  "renderer": {
+    "file": "render-synthetic-note.py",
+    "sha256": "4985ed47611c591f09dae3123e9e8ad3e4b5846d411d717be6bb5510cf4c72b6"
+  },
+  "authoredText": {
+    "file": "synthetic-clinical-note-source.txt",
+    "sha256": "eb52962c9f3f216bf065fea55f461c72be7f1786fc20030391255e0e291f79da"
+  },
+  "ocr": {
+    "engineVersion": [
+      "tesseract 5.5.2",
+      " leptonica-1.87.0"
+    ],
+    "command": [
+      "/opt/homebrew/bin/tesseract",
+      "public/assets/healthcare/synthetic-clinical-note.png",
+      "public/assets/healthcare/synthetic-clinical-note-psm3",
+      "-l",
+      "eng",
+      "--oem",
+      "1",
+      "--psm",
+      "3"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "outputFile": "synthetic-clinical-note-psm3.txt",
+    "outputSha256": "f6c99d8e09590834cf16811e4f7f13622bf4555e5269c2d58996d652fc2ea1f5"
+  },
+  "scope": "One clean synthetic image and one actual OCR run. This is not an accuracy benchmark, clinical validation, or proof of production readiness."
+}

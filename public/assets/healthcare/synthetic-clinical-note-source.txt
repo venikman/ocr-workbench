@@ -1,0 +1,29 @@
+SYNTHETIC / NOT A PATIENT RECORD
+Clinical document abstraction exercise
+All content and identifiers are fictional. Not clinical guidance.
+DOCUMENT AND ENCOUNTER
+Document ID: DEMO-DOCUMENT-001     Page: 1 of 1
+Patient ID: DEMO-PATIENT-ALPHA
+Encounter ID: DEMO-ENCOUNTER-001
+Encounter date: 2026-01-10     Note date: 2026-01-11
+SUBJECT AND ASSERTION STATUS
+Patient reports mild fatigue. Patient denies chest pain.
+Family history: Mother has diabetes mellitus.
+Patient diabetes status: not documented in this note.
+Allergies: unknown; verification is pending.
+HISTORY AND MEDICATION LIST
+Past procedure: appendectomy, documented in 2014.
+Historical list: Example medicine A, 0.5 mg, oral, once daily.
+Current use is unverified. This is not a medication order.
+RECORDED RESULT
+Glucose: 104 mg/dL. Specimen date: 2026-01-09.
+Result date: 2026-01-10. Interpretation: not recorded.
+PLAN AND FOLLOW-UP
+ECG ordered for 2026-01-17.
+Completion and result are not documented in this note.
+An order alone does not establish that the test was performed.
+REVIEW EXERCISE
+Check source fidelity, identity, subject, negation, time, and units.
+Missing documentation does not prove missing care.
+Do not use this page for patient care or treatment decisions.
+Synthetic evaluation fixture / OCR Workbench / 1

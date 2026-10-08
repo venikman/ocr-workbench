@@ -1,0 +1,3 @@
+# Captured OCR is evidence: retain its exact whitespace and trailing blank lines.
+public/assets/*-psm*.txt -whitespace
+public/assets/healthcare/*-psm*.txt -whitespace

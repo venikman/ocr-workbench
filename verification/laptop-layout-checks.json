@@ -1,0 +1,50 @@
+[
+  {
+    "requestedViewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "cssViewport": [
+      1164,
+      655
+    ],
+    "findingsWidth": 232,
+    "horizontalOverflow": false,
+    "sourceWidth": 511,
+    "toolbarHeight": 43,
+    "toolbarTop": 0,
+    "verticalPageOverflow": false
+  },
+  {
+    "requestedViewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "cssViewport": [
+      1242,
+      698
+    ],
+    "findingsWidth": 232,
+    "horizontalOverflow": false,
+    "sourceWidth": 563,
+    "toolbarHeight": 43,
+    "toolbarTop": 0,
+    "verticalPageOverflow": false
+  },
+  {
+    "requestedViewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "cssViewport": [
+      1309,
+      818
+    ],
+    "findingsWidth": 232,
+    "horizontalOverflow": false,
+    "sourceWidth": 607,
+    "toolbarHeight": 43,
+    "toolbarTop": 0,
+    "verticalPageOverflow": false
+  }
+]

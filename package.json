@@ -1,0 +1,54 @@
+{
+  "name": "@local/ocr-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/prepare-sites-build.mjs",
+    "preview": "vite preview",
+    "test:sites": "node --test tests/sites-worker.test.mjs",
+    "test": "node --test tests/review.test.mjs tests/clinical-review.test.mjs tests/healthcare-fixtures.test.mjs tests/component-options.test.mjs tests/component-styles.test.mjs",
+    "local": "node scripts/start-local.mjs",
+    "test:ocr": "node --test tests/ocr.test.mjs"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "vite": "6.4.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "description": "Embeddable React client component for source-anchored OCR and domain review",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.jsx"
+    },
+    "./styles.css": "./src/styles.css",
+    "./review": {
+      "types": "./src/review.d.ts",
+      "import": "./src/review.js"
+    },
+    "./demo": {
+      "types": "./src/demo.d.ts",
+      "import": "./src/demo.js"
+    }
+  },
+  "files": [
+    "src",
+    "public/assets",
+    "README.md",
+    "NEXTJS.md",
+    "SPEC.md",
+    "SAMPLE-SOURCES.md",
+    "HEALTHCARE-SAMPLE.md",
+    "HEALTHCARE-READINESS.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "peerDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}

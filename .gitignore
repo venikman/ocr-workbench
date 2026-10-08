@@ -1,0 +1,24 @@
+# Dependencies and generated builds, including the Next.js example.
+node_modules/
+dist/
+.next/
+coverage/
+*.tsbuildinfo
+
+# Local configuration and transient files.
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+/work/
+*.tgz
+*.zip
+
+# Portable review exports are session data, not source fixtures.
+/verification/exported-review.json
+/verification/exported-domain-review.json
+/verification/healthcare-export.json
+/verification/healthcare-end-to-end.json
